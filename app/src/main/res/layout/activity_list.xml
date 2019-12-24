@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityList">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="15dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="성장 일지" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/ac_list_txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="이름 : "
+                android:textSize="19dp"
+                android:textColor="#000000"
+                android:gravity="center_vertical"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름변경"
+                android:onClick="ChangeName"/>
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/ac_list_txt_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="나이 : "
+            android:textSize="19dp"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/ac_list_txt_manuarity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="성장 : "
+            android:textSize="19dp"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="25dp"
+        android:background="#000000"
+        android:gravity="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:padding="6dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:text="옵션" />
+
+
+
+    <Button
+        android:id="@+id/ac_list_btn_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="데이터 초기화" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/ac_list_switch_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="배경음"
+            android:layout_weight="1"/>
+        <Switch
+            android:id="@+id/ac_list_switch_effectSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="효과음"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <Switch
+            android:id="@+id/ac_list_switch_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="알림"
+            android:layout_weight="1"/>
+        <Switch
+            android:id="@+id/ac_list_switch_vibrator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="진동"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <!--<Button
+        android:id="@+id/ac_list_btn_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="배경음 : OFF" />
+    <Button
+        android:id="@+id/ac_list_btn_effectSound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="효과음 : OFF" />-->
+
+</LinearLayout>

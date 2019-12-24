@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tamagotchi">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name = "android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ActivityGamePunch"></activity>
+        <activity android:name=".ActivitySplashRock" />
+        <activity android:name=".ActivityGameRock" />
+
+        <service
+            android:name=".ServiceGrowing"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ServiceGrowth"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ActivityOption" />
+        <activity android:name=".ActivityList" />
+
+        <service
+            android:name=".ServiceBgm"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".ServiceEating"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ActivityCreate">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityMain" />
+    </application>
+
+</manifest>
