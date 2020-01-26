@@ -40,7 +40,7 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ActivityCreate">
+        <activity android:name=".ktActivityCreate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

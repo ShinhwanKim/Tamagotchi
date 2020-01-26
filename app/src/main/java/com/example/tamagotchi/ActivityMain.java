@@ -1,28 +1,20 @@
 package com.example.tamagotchi;
 
 import android.app.AlertDialog;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -43,7 +35,6 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.concurrent.Executor;
 
 /*이 액티비티는 메인 액티비티이다. 파이리 키우기 대부분의 play를 이 액티비티에서 한다.
   화면 상단에 있는 4가지 데이터 (좌측부터) 배고픔, 체력, 건강, 감정는 성장 데이터이다.
@@ -83,7 +74,7 @@ public class ActivityMain extends AppCompatActivity {
     private Intent broadIntent;
     private Intent eatingIntent;
 
-    public static ClassPet myPet;
+    public static ktClassPet myPet;
     public ArrayList<ClassFood> foodList;
     public ClassFood foodDry;
     public ClassFood foodCan;
@@ -163,7 +154,7 @@ public class ActivityMain extends AppCompatActivity {
         /*Intent intentGrowth = new Intent(ActivityMain.this,ServiceGrowth.class);
         bindService(intentGrowth,conn,Context.BIND_AUTO_CREATE);*/
 
-        myPet = new ClassPet();
+        myPet = new ktClassPet();
         foodList = new ArrayList<>();
 
         foodDry = new ClassFood();

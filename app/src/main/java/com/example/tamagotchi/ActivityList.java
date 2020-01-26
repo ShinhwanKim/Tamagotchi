@@ -1,7 +1,6 @@
 package com.example.tamagotchi;
 
 import android.app.AlertDialog;
-import android.app.job.JobInfo;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -46,7 +45,7 @@ public class ActivityList extends AppCompatActivity {
     private TextView txtAge;
     private TextView txtManuarity;
 
-    private ClassPet myPet;
+    private ktClassPet myPet;
     private SharedPreferences SPmyPetData;
     private SharedPreferences.Editor edPetData;
 
@@ -55,7 +54,7 @@ public class ActivityList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
 
-        myPet = new ClassPet();
+        myPet = new ktClassPet();
         txtName = findViewById(R.id.ac_list_txt_name);
         txtAge = findViewById(R.id.ac_list_txt_age);
         txtManuarity = findViewById(R.id.ac_list_txt_manuarity);

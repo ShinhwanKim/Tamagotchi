@@ -2,25 +2,17 @@ package com.example.tamagotchi;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Vibrator;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -29,10 +21,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,7 +40,7 @@ public class ActivityCreate extends AppCompatActivity {
     private ImageView imgTouch;
     private ImageView imgEgg;
 
-    private ClassPet myPet;
+    private ktClassPet myPet;
     Animation shake;
 
     @Override
@@ -78,7 +68,7 @@ public class ActivityCreate extends AppCompatActivity {
         final SharedPreferences.Editor edOptionData = SPoptionData.edit();
 
         wholeLayout = findViewById(R.id.ac_create_constraint);
-        imgTouch = findViewById(R.id.ac_create_img_tap);
+        imgTouch = findViewById(R.id.ac_create_img_wakeup);
         imgEgg = findViewById(R.id.ac_create_img_egg);
 
         /*AlertDialog.Builder createTutorial = new AlertDialog.Builder(ActivityCreate.this);*/
@@ -143,7 +133,7 @@ public class ActivityCreate extends AppCompatActivity {
 
         //"MyPetData"이란 파일에 값이 없을때 "EMPTY". 이 때는 파이리를 최초 생성해줘야 한다.
         if(checkDataPresence.equals("EMPTY")){
-            myPet = new ClassPet();
+            myPet = new ktClassPet();
 
             wholeLayout.setOnTouchListener(new View.OnTouchListener() {
                 @Override
