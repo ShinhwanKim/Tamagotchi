@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/ac_create_img_tap"
+        android:id="@+id/ac_create_img_wakeup"
         android:layout_width="80dp"
         android:layout_height="80dp"
         tools:layout_editor_absoluteX="98dp"
